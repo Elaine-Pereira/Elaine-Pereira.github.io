@@ -47,40 +47,55 @@ function cabeça(){
 }
 
 //corpo//
-pincel.strokeStyle = 'black';
-pincel.beginPath();
-pincel.moveTo(180, 130);
-pincel.lineTo(180, 235);
-pincel.lineWidth = 5.5;
-pincel.stroke();
+function corpo(){
+    pincel.strokeStyle = 'black';
+    pincel.beginPath();
+    pincel.moveTo(180, 130);
+    pincel.lineTo(180, 235);
+    pincel.lineWidth = 5.5;
+    pincel.stroke();
+}
+
 //braço direito//
-pincel.beginPath();
-pincel.strokeStyle = 'black';
-pincel.moveTo(180, 139);
-pincel.lineTo(220, 155);
-pincel.lineWidth = 5.5;
-pincel.stroke();
+function bracoD(){
+    pincel.beginPath();
+    pincel.strokeStyle = 'black';
+    pincel.moveTo(180, 139);
+    pincel.lineTo(220, 155);
+    pincel.lineWidth = 5.5;
+    pincel.stroke();
+}
+
 //braço esquerdo//
-pincel.beginPath();
-pincel.strokeStyle = 'black';
-pincel.moveTo(180, 139);
-pincel.lineTo(140, 155);
-pincel.lineWidth = 5.5;
-pincel.stroke();
+function bracoE(){
+    pincel.beginPath();
+    pincel.strokeStyle = 'black';
+    pincel.moveTo(180, 139);
+    pincel.lineTo(140, 155);
+    pincel.lineWidth = 5.5;
+    pincel.stroke();
+}
+
 // perna direita//
-pincel.beginPath();
-pincel.strokeStyle = 'black';
-pincel.moveTo(180, 233);
-pincel.lineTo(220, 280);
-pincel.lineWidth = 5.5;
-pincel.stroke();
+function pernaD(){
+    pincel.beginPath();
+    pincel.strokeStyle = 'black';
+    pincel.moveTo(180, 233);
+    pincel.lineTo(220, 280);
+    pincel.lineWidth = 5.5;
+    pincel.stroke();
+}
+
 //perna esquerda//
-pincel.beginPath();
-pincel.strokeStyle = 'black';
-pincel.moveTo(180, 233);
-pincel.lineTo(140, 280);
-pincel.lineWidth = 5.5;
-pincel.stroke();
+function pernaE(){
+    pincel.beginPath();
+    pincel.strokeStyle = 'black';
+    pincel.moveTo(180, 233);
+    pincel.lineTo(140, 280);
+    pincel.lineWidth = 5.5;
+    pincel.stroke(); 
+}
+
     
 
  
