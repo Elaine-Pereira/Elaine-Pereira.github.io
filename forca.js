@@ -6,7 +6,7 @@ pincel.fillStyle ="white";
 pincel.fillRect(0,0,800,600);
 
 //forca//
-function forca(){
+function desenhaForca(){
     pincel.strokeStyle = "black"
     pincel.beginPath();
     pincel.moveTo(50, 30);
