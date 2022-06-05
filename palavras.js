@@ -1,10 +1,11 @@
-
+var palavras = ["amor", "felicidade", "paz", "gratidao","sucesso","inteligencia","musica"];
+ var busca = palavras[Math.floor(Math.random() * palavras.length )];
 var regEx = new RegExp("^[A-Z]+$");
+
 //função gera galavra
 function palavrasAleatorias (){
-    var palavras = ["amor", "felicidade", "paz", "gratidao","sucesso","inteligencia","musica"];
-    var busca = palavras[Math.ceil(Math.random() * (palavras.length - 1))];
-    document.getElementById("canvas").innerHTML = busca;
+    
+    document.getElementById("tabuleiro").innerHTML = busca;
 }
 console.log(palavrasAleatorias(palavras));
 
