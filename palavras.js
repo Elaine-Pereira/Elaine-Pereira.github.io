@@ -1,17 +1,23 @@
-var palavras = ["amor", "felicidade", "paz", "gratidao","sucesso","inteligencia","musica"];
- var busca = palavras[Math.floor(Math.random() * palavras.length )];
-var regEx = new RegExp("^[A-Z]+$");
+const regEx = new RegExp("^[A-Z]+$");
+let palavras = ["amor", "felicidade", "paz", "gratidao","sucesso","inteligencia","musica"];
+var palavraOculta = '';
+var erros = 0;
+letrasCertas = [];
+letrasErradas = [];
 
-//função gera galavra
-function palavrasAleatorias (){
-    
-    document.getElementById("tabuleiro").innerHTML = busca;
-}
-console.log(palavrasAleatorias(palavras));
+var botaoJogar = document.querySelector('bot1');
+botaoJogar.addEventListener('click', jogar);
 
-
-
-//check se a palavra cabe no espaço
+//função novo jogo//
+function jogar(){
+    desenhaForca();
+    document.addEventListener('keypress', check);
+    erros = 0;
+    acertos = 0;
+    letrasCertas = [];
+    letrasErradas = [];
+} 
+//check se a palavra cabe no espaço//
 function check(espaço, palavras){
     if(espaço.length !== palavras.length){
         return false;
@@ -22,4 +28,12 @@ function check(espaço, palavras){
     }
     return true;  //se couber no espaço
 }
+//função gera galavra//
+function palavraAleatoria(){
+    palavra = palavras.length
+    var busca = [Math.floor(Math.random() * palavras.length )];
+    palavraOculta = palavras[busca];
+    return palavraOculta;
+}
+console.log(palavrasAleatorias(palavraOculta));
 
