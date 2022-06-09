@@ -7,9 +7,51 @@
 </head>
     <body>
         <canvas id="tabuleiro" width="800" height="400"></canvas>
+        <div id="palavraOculta"></div>
+        <div id="campoPalavras"></div>
+        <div class="letrasErradas"></div>
+        </div>
         <main>
-            <button type="button" class="botao1" id="bot1" onclick="jogar()">Jogar</button>
-            <button type="button" class="botao2" id="bot2">Nova palavra</button>
+            <div class="teclado">
+                <button id="tecla-A" onclick="letraIdentificada('A')">A</button>
+                <button id="tecla-B" onclick="letraIdentificada('B')">B</button>
+                <button id="tecla-C" onclick="letraIdentificada('C')">C</button>
+                <button id="tecla-D" onclick="letraIdentificada('D')">D</button>
+                <button id="tecla-E" onclick="letraIdentificada('E')">E</button>
+                <button id="tecla-F" onclick="letraIdentificada('F')">F</button>
+                <button id="tecla-G" onclick="letraIdentificada('G')">G</button>
+                <button id="tecla-H" onclick="letraIdentificada('H')">H</button>
+                <button id="tecla-I" onclick="letraIdentificada('I')">I</button>
+                <br>
+                <button id="tecla-J" onclick="letraIdentificada('J')">J</button>
+                <button id="tecla-K" onclick="letraIdentificada('K')">K</button>
+                <button id="tecla-L" onclick="letraIdentificada('L')">L</button>
+                <button id="tecla-M" onclick="letraIdentificada('M')">M</button>
+                <button id="tecla-N" onclick="letraIdentificada('N')">N</button>
+                <button id="tecla-O" onclick="letraIdentificada('O')">O</button>
+                <button id="tecla-P" onclick="letraIdentificada('P')">P</button>
+                <button id="tecla-Q" onclick="letraIdentificada('Q')">Q</button>
+                <button id="tecla-R" onclick="letraIdentificada('R')">R</button>
+                <br>
+                <button id="tecla-S" onclick="letraIdentificada('S')">S</button>
+                <button id="tecla-T" onclick="letraIdentificada('T')">T</button>
+                <button id="tecla-U" onclick="letraIdentificada('U')">U</button>
+                <button id="tecla-V" onclick="letraIdentificada('V')">V</button>
+                <button id="tecla-W" onclick="letraIdentificada('W')">W</button>
+                <button id="tecla-X" onclick="letraIdentificada('X')">X</button>
+                <button id="tecla-Y" onclick="letraIdentificada('Y')">Y</button>
+                <button id="tecla-Z" onclick="letraIdentificada('Z')">Z</button>
+                <br>    
+            </div>
+         <section>
+            <button type="button" class="botao1" id="bot1" onclick ="jogar()">Jogar</button>
+            <button type="button" class="botao2" id="bot2" onclick ="fClick()">Sugestão de palavra</button>
+            <div id="container">
+                <label for=".config">Adicione uma nova palavra ao jogo:</label>
+                <input type="text" placeholder="nova palavra" id="adcpalavra">
+                <span>*Permitido apenas letras maiúsculas.</span>
+            </div>
+        </section>
         </main>
 
     
