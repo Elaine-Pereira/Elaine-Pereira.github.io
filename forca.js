@@ -9,15 +9,13 @@ pincel.fillRect(0,0,800,600);
 var listaDepalavras = ['AMOR','GRATIDÃO','SUCESSO','PAZ','INTELIGÊNCIA','UNIAO','FELICIDADE' ];
 var palavraOculta = listaDepalavras[Math.floor(Math.random() * listaDepalavras.length)]
 function desenhaTracos(){
-    for (var i=0; i < palavraOculta.length; i++){
-        pincel.beginPath();
-        pincel.moveTo(150 , 180);
-        pincel.lineTo(70, 180);
-        pincel.stroke();  
+    for (var i = 0; i < palavraOculta.length; i++){
+            pincel.beginPath();
+            pincel.moveTo();
+            pincel.lineTo();
+            pincel.stroke();        
 }
 }
-
-
 
 
 //forca//
