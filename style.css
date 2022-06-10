@@ -1,3 +1,4 @@
+
 body{
     background: pink
 
@@ -7,6 +8,49 @@ canvas{
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
   
+}
+.teclado button {
+    padding: 8px;
+    width: 70px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    background-color: #f028c4;
+    cursor: pointer;
+    margin: 3px 0;
+}
+
+.teclado button:active {
+    transform: scale(1.2);
+}
+.letrasErradas {
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    color: #ff0000b0;
+    margin: 0 3px;
+}
+
+#palavraOculta {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.container{
+    display:none;
+}
+span{
+    display:inline block;
 }
 .botao1{
     display:inline;
