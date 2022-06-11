@@ -1,4 +1,7 @@
 
+var listaDepalavras = ['AMOR','GRATIDÃO','SUCESSO','PAZ','INTELIGÊNCIA','UNIAO','FELICIDADE' ];
+var palavraOculta = listaDepalavras[Math.floor(Math.random() * listaDepalavras.length)]
+
 // deseha tabuleiro
 const canvas = document.getElementById('tabuleiro');
 const pincel = canvas.getContext('2d');
@@ -6,18 +9,15 @@ pincel.fillStyle ="white";
 pincel.fillRect(0,0,800,600);
 
 //função adiciona tracinhos/
-var listaDepalavras = ['AMOR','GRATIDÃO','SUCESSO','PAZ','INTELIGÊNCIA','UNIAO','FELICIDADE' ];
-var palavraOculta = listaDepalavras[Math.floor(Math.random() * listaDepalavras.length)]
 function desenhaTracos(){
     for (var i = 0; i < palavraOculta.length; i++){
             pincel.beginPath();
-            pincel.moveTo();
-            pincel.lineTo();
+            pincel.moveTo(230 + (35 * i), 360);
+            pincel.lineTo(260 + (35 * i), 360);
             pincel.stroke();        
 }
 }
-
-
+console.log(palavraOculta)
 //forca//
 function desenhaForca(){
     pincel.strokeStyle = "black"
@@ -53,7 +53,7 @@ function desenhaForca(){
 
 
 //Cabeça//
-function cabeça(){
+function cabeca(){
     pincel.fillStyle = 'black'
     pincel.beginPath();
     pincel.arc(180, 108, 23, 0, Math.PI * 2, true);
