@@ -19,7 +19,7 @@ function addPalavra(){
     var novaPalavra = document.getElementById("adcpalavra");
         if(regEx.test(novaPalavra.value)) {
             palavras.push(novaPalavra.value);
-            alert ("Palavra " + novaPalavra.value + " adicionada com sucesso.");
+            alert("Palavra " + novaPalavra.value + " adicionada com sucesso.");
         } 
         novaPalavra.value = "";   
 }
