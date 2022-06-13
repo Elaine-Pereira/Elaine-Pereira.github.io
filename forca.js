@@ -1,19 +1,19 @@
 
-var listaDepalavras = ['AMOR','GRATIDÃO','SUCESSO','PAZ','INTELIGÊNCIA','UNIAO','FELICIDADE' ];
+var listaDepalavras = ['AMOR','GRATIDAO','SUCESSO','PAZ','INTELIGENCIA','UNIAO','FELICIDADE' , 'TRISTEZA', 'CULPA'];
 var palavraOculta = listaDepalavras[Math.floor(Math.random() * listaDepalavras.length)]
 
 // deseha tabuleiro
 const canvas = document.getElementById('tabuleiro');
 const pincel = canvas.getContext('2d');
-pincel.fillStyle ="white";
-pincel.fillRect(0,0,800,600);
+pincel.fillStyle ="#DCDCDC";
+pincel.fillRect(0,0,1200,400);
 
 //função adiciona tracinhos/
 function desenhaTracos(){
     for (var i = 0; i < palavraOculta.length; i++){
             pincel.beginPath();
-            pincel.moveTo(230 + (35 * i), 360);
-            pincel.lineTo(260 + (35 * i), 360);
+            pincel.moveTo(230 + (34 * i), 380);
+            pincel.lineTo(260 + (34 * i), 380);
             pincel.stroke();        
 }
 }

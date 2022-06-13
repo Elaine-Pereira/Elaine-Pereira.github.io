@@ -45,13 +45,10 @@ canvas{
     text-align: center;
 }
 
-
 .container{
     display:none;
 }
-span{
-    display:inline block;
-}
+
 .botao1{
     display:inline;
     color:#000000;

@@ -15,8 +15,9 @@ function jogar() {
         adicionaTentativa();
     for (var i = 0; i < palavraOculta.length; i++){
         if (palavraOculta[i] == (event.key).toUpperCase()){
+            pincel.fillStyle ="black"
             pincel.font = "30px Arial";
-            pincel.fillText((event.key).toUpperCase(), 260 + (35 * i), 360);
+            pincel.fillText((event.key).toUpperCase(), 230 + (34 * i), 360);
             acertos++;
           }
           }
@@ -32,20 +33,23 @@ function jogar() {
 function adicionaTentativa(){
     if(!tentativas.includes(event.key)){
         tentativas = tentativas + event.key;
+        pincel.fillStyle ="black"
         pincel.font = "30px Arial";
-        pincel.fillText("Tentativas:" + tentativas.toUpperCase(), 500, 360);
+        pincel.fillText("Tentativas:" + tentativas.toUpperCase(), 500, 200);
     }
 }
 function verificaFimJogo(){
     if (quantidadedeErros >= 6){
+        pincel.fillStyle ="black"
         pincel.font = "30px Arial";
-        pincel.fillText("VOCÊ PERDEU! A palavra era: " + palavraOculta, 200, 100);
+        pincel.fillText("VOCÊ PERDEU! A palavra era: " + palavraOculta, 300, 100);
         Window.onkeypress = null;
         return;
     }
     if(acertos == palavraOculta.length){
+        pincel.fillStyle ="black"
         pincel.font = "30px Arial";
-        pincel.fillText("VOCÊ GANHOU!!!", 20, 100);
+        pincel.fillText("VOCÊ GANHOU!!!", 300, 100);
         Window.onkeypress = null;
         return;
     }
@@ -55,41 +59,21 @@ function desenhaBoneco(quantidadedeErros){
     switch (quantidadedeErros){
         case 1:
             cabeca();
+            break;
         case 2:
             corpo();
+            break;
         case 3:
             bracoE();
+            break;
         case 4:
             bracoD();
+            break;
         case 5:
             pernaE();
+            break;
         case 6:
             pernaD();
         break;
-    }
-}
-//BOTÃO SUGESTÃO
-var adcPalavra = document.getElementById("bot2");
-adcPalavra.addEventListener("click", function() {
-    mostra();
-    addPalavra();
-})
-
-function addPalavra(){
-    var novaPalavra = document.getElementById("adcpalavra");
-        if(regEx.test(novaPalavra.value)) {
-            palavras.push(novaPalavra.value);
-            alert("Palavra " + novaPalavra.value + " adicionada com sucesso.");
-        } 
-        novaPalavra.value = "";   
-}
-
-function mostra(){
-    var display = document.getElementById("container").style.display;
-    if(display == "none"){
-        document.getElementById("container").style.display = 'block';
-    }
-    else {
-        document.getElementById("container").style.display = 'none';
     }
 }
